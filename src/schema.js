@@ -45,7 +45,8 @@ const typeDefs = gql`
     id: ID!
     title: String
     # Length of module in minutes
-    length: Int @deprecated(reason: "replaced with the durationInSeconds field")
+    length: Int
+      @deprecated(reason: "replaced with the durationInSeconds field!")
     durationInSeconds: Int
   }
 `;
