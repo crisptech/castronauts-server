@@ -29,6 +29,9 @@ const resolvers = {
       }
     },
   },
+  Module: {
+    durationInSeconds: ({ length }) => length,
+  },
   Track: {
     // Track's parent is tracksForHome, since it is
     author: ({ authorId }, _, { dataSources }) => {
@@ -37,6 +40,7 @@ const resolvers = {
     modules: ({ id }, _, { dataSources }) => {
       return dataSources.trackAPI.getModules(id);
     },
+    durationInSeconds: ({ length }) => length,
   },
 };
 
